@@ -1,0 +1,29 @@
+{
+    "parts": [
+        {
+            "part": "promoter",
+            "name": "promoter 1",
+            "sequence": "LSKJFIEWJKSDJF"
+        },
+        {
+            "part": "terminator",
+            "name": "terminator_VyC73",
+            "sequence": "AJKSIEJFSLKJIELSJ"
+        },
+        {
+            "part": "RBS",
+            "name": "RBS_ecp30",
+            "sequence": "AJKSIEJFSLKJIELSJ"
+        },
+        {
+            "part": "terminator",
+            "name": "terminator_Ipo710",
+            "sequence": "AJKSIEJFSLKJIELSJ"
+        },
+        {
+            "part": "promoter",
+            "name": "promoter_jns910",
+            "sequence": "AJKSIEJFSLKJIELSJ"
+        }
+    ]
+}
