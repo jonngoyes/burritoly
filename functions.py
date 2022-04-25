@@ -37,4 +37,6 @@ def read_output(results = 'results.out', min_score = 800):
 			print("Number of hits: ",count)
 			break
 		count = count + 1
+	print ("Results saved in: ",results)
 	return 0
+
