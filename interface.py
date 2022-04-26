@@ -11,13 +11,18 @@ from functions import *
 
 
 burritoly = toolDeviceThing()
+Jon = userPerson(user_id = '191')
 burritoly.on_event('search database')
 RUNNING = True
 while RUNNING:
 	if burritoly.state.name == 'searchState':
 		search_db(query_in = 'realfasta')
-		read_output()
-		print('second')
+		Jon.readOutput()
+		search_db(query_in = 'fakefastaJawn')
+		Jon.readOutput()
+
+		#print(Jon.printRating())
+		#read_output()
 	elif burritoly.state.name == 'editState':
 		pass
 	else : # idleState
