@@ -45,4 +45,57 @@ class toolDeviceThing(STATE):
 
 		self.state = self.state.on_event(event)
 
+class userPerson(object):
+	def __init__(self,user_id = None, depth = 10, min_score = 800):
+		self.user_id = user_id
+		self.devices = []
+		self.search_score = []
+		self.depth = depth
+		self.min_score = min_score
+	def addDevice (self, toolDeviceThing):
+		self.device.append(toolDeviceThing)
+	def removeDevice(self, toolDeviceThing):
+		self.device.pop()
+	def printRating(self):
+		return self.search_score
+	def readOutput(self, results = 'results.out'):
+		fid_user = open('UserHistory' + self.user_id +'.txt','a')
+		fid = open(results,'r')
+		arr = fid.readline()
+		arr_list = arr.split()
+		score = int(arr_list[1])
+		avg_score = score
+		count = 1
+		#print(arr.type())
+		while (score > self.min_score):
+			print(arr)
+			arr_list = arr.split()
+			score = int(arr_list[1])
+			fid_user.write(arr)
+			if (score < self.min_score):
+				print("Number of hits: ",count)
+				break
+			avg_score = score + avg_score
+			arr = fid.readline()
+
+			count = count + 1
+		print ("Results saved in: ",results)
+		print()
+		avg_score = avg_score/count
+
+		if (len(self.search_score) > self.depth):
+			self.search_score.pop(0)
+		self.search_score.append(avg_score)
+
+		fid_user.close()
+		fid.close()
+		return 0
+	def nosy(self):
+		fid = open('UserHistory'+self.user_id+'txt')
+
+
+
+
+
+
 
