@@ -19,3 +19,5 @@ Run a normal query vs the swissprot database
 		THIS IS BETTER:
 		blastp -db db/swissprot/swissprot -query queries/realfasta.fsa -out results.out
 
+To make a db from fasta files:
+		makeblastdb -in bad_db.fsa -parse_seqids -blastd_version 5 -dbtype prot

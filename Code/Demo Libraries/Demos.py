@@ -47,8 +47,10 @@ def splitSequence(sequence):
     This function randomly separates the sequence at a random point in the string
     This will be used to create sequences that become bad when put together
     '''
+    length = len(sequence)
+    split = round(length / 2)
 
-    splitAt = randint(0,len(sequence)-1)
+    splitAt = randint(split - 50,split + 50)
     sequence = str(sequence)
     beg = sequence[0:splitAt]
     end = sequence[(splitAt+1):(len(sequence)-1)]
@@ -105,13 +107,15 @@ def createBadPartsWhenTogether():
     badPart1 = {
         "part": part1,
         "name": getName(part1),
-        "sequence": sequence1
+        "sequence": sequence1,
+        "score": "half beginning"
     }
 
     badPart2 = {
         "part": part2,
         "name": getName(part2),
-        "sequence": sequence2
+        "sequence": sequence2,
+        "score": "half end"
     }
 
     return badPart1, badPart2 
@@ -136,7 +140,8 @@ def createBadPart():
     badPart = {
         "part": part,
         "name": name,
-        "sequence": sequence
+        "sequence": sequence,
+        "score": "bad" 
     }
 
     return badPart
@@ -171,7 +176,8 @@ def createGoodPart():
     goodPart = {
         "part": part,
         "name": name,
-        "sequence": sequence
+        "sequence": sequence,
+        "score": "good"
     }
 
     return goodPart

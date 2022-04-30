@@ -18,11 +18,18 @@ while RUNNING:
 	if burritoly.state.name == 'searchState':
 		search_db(query_in = 'realfasta')
 		Jon.readOutput()
-		search_db(query_in = 'fakefastaJawn')
-		Jon.readOutput()
+		# search_db(query_in = 'fakefastaJawn')
+		# Jon.readOutput()
+		print(Jon.printRating())
+		
+		# Jon.search_bad_db(query_in = 'badfasta')
+		# if(Jon.readBadOutput()):
+		#  	print('Exiting program')
+		#  	RUNNING = False
+		# RUNNING = False
 
-		#print(Jon.printRating())
-		#read_output()
+
+
 	elif burritoly.state.name == 'editState':
 		pass
 	else : # idleState
